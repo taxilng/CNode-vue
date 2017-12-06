@@ -4,6 +4,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import home from '@/components/home'
+import content from '@/components/content'
 
 Vue.use(Router)
 const router = new Router({
@@ -13,6 +14,11 @@ const router = new Router({
             path:'/',
             name:'home',
             component: home
+        },
+        {
+            path:'/content/:id',
+            name:'content',
+            component: content
         }
     ]
 })

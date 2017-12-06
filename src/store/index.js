@@ -32,7 +32,7 @@ const store = new Vuex.Store({
                         }
                     })
                     .then((data)=>{
-                        console.log(data);
+                        // console.log(data);
                         commit('getList',{list:data.data.data,loading:false})
                     })
                     .catch((error)=>{

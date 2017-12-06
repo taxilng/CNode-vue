@@ -1,7 +1,7 @@
 <template>
-    <div class='home' v-loading="loading">
-        <ul >
-            <li v-for="item in listData">
+    <div class='home'>
+        <ul v-loading="loading">
+            <li v-for="item in listData" >
                 <router-link to="/">
                     <img :src="item.author.avatar_url">
                 </router-link>
@@ -21,7 +21,7 @@
                 <div v-else>
                     <span class="topiclist-tab">分享</span>
                 </div>
-                <router-link to="/" class="title">{{item.title}}</router-link>
+                <router-link :to="{name:'content',params:{id:item.id}}" class="title">{{item.title}}</router-link>
             </li>
         </ul>
         <el-pagination class="pagination" @size-change="handleSizeChange"  @current-change="handleCurrentChange" :current-page.sync="currentPage" :page-size="10" layout="sizes, prev, pager, next" :total="10000">
