@@ -1,1 +1,5 @@
-# 基于webpack的vue环境
+# 用vue做的CNode社区
+```
+npm i
+npm run dev
+```
