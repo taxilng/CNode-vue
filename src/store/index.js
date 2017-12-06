@@ -9,31 +9,37 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
     state: {
-        list: []
+        list: [],
+        loading: true
     },
     mutations: {
-        getList(state, list){
+        getList(state, {list,loading}){
             state.list = list
+            state.loading = loading
         }
     },
     actions: {
-        getListAction({commit}){
+
+        getListAction({commit},{page,limit}){
             //发送请求
-            axios.get('https://cnodejs.org/api/v1/topics',
-                {
-                    params: {
-                        page: 1,
-                        limit: 10,
-                        mdrender: 'false',
-                    }
-                })
-                .then((data)=>{
-                // console.log(data);
-                    commit('getList',data.data.data)
-            })
-                .catch((error)=>{
-                    console.log(error);
-                })
+            setTimeout(()=>{
+                axios.get('https://cnodejs.org/api/v1/topics',
+                    {
+                        params: {
+                            page: page,
+                            limit: limit,
+                            mdrender: 'false',
+                        }
+                    })
+                    .then((data)=>{
+                        console.log(data);
+                        commit('getList',{list:data.data.data,loading:false})
+                    })
+                    .catch((error)=>{
+                        console.log(error);
+                    })
+            },1000)
+
         }
     }
 })

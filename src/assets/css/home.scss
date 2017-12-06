@@ -1,6 +1,7 @@
 ul{
   width: 1095px;
   margin: 0 auto;
+  min-height: 30rem;
   li{
     list-style: none;
     padding: 10px;
@@ -30,9 +31,19 @@ ul{
     color: #fff;
     font-size: 12px;
   }
+  .topiclist-tab{
+    background-color: #e5e5e5;
+    color: #999;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-size: 12px;
+  }
   .title{
     margin-left: 10px;
   }
 }
-
+.pagination{
+  width: 1095px;
+  margin: 0 auto;
+}
 
