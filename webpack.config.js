@@ -29,7 +29,10 @@ module.exports = {
         rules: [
             {
                 test: /\.vue$/,
-                loader: 'vue-loader'
+                loader: 'vue-loader',
+                options: {
+                    'scss': 'style-loader!css-loader!sass-loader'
+                }
             },
             {
                 test: /(\.jsx|\.js)$/,
@@ -50,6 +53,10 @@ module.exports = {
                     }
 
                 ]
+            },
+            {
+                test: /\.(scss|sass)$/,
+                loader: 'sass-loader'
             },
             {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

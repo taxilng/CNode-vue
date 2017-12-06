@@ -1,0 +1,38 @@
+ul{
+  width: 1095px;
+  margin: 0 auto;
+  li{
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+    span{
+      width: 70px;
+      font-size: 12px;
+      text-align: center;
+    }
+    a{
+      text-decoration: none;
+      color: #888;
+    }
+  }
+  img{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+  }
+  .put_top{
+    background: #80bd01;
+    padding: 2px 4px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 12px;
+  }
+  .title{
+    margin-left: 10px;
+  }
+}
+
+
