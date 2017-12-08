@@ -38,7 +38,7 @@ const store = new Vuex.Store({
                     .catch((error)=>{
                         console.log(error);
                     })
-            },1000)
+            },0)
 
         }
     }
