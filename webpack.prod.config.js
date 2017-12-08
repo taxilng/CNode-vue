@@ -1,23 +1,17 @@
 const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 function resolve (dir) {
     return path.join(__dirname, '/', dir)
 }
 module.exports = {
     entry: __dirname + "/src/main.js",//已多次提及的唯一入口文件
     output: {
-        //path: __dirname + "/public",//打包后的文件存放的地方
         publicPath: '/',
         path: __dirname + "/dist",
         filename: "bundle-[hash].js"//打包后输出文件的文件名
-    },
-    devtool: 'source-map', //线上打包调试用
-    devServer: {
-        contentBase: "./build",//本地服务器所加载的页面所在的目录
-        historyApiFallback: true,//不跳转
-        inline: true,//实时刷新
-        hot: true
     },
     resolve:{
         extensions: ['.js','.vue','.json'],
@@ -74,6 +68,14 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: __dirname + "/index.html"//防止缓存
         }),
-        new webpack.HotModuleReplacementPlugin()//热加载插件
+        new webpack.HotModuleReplacementPlugin(),//热加载插件
+        new webpack.optimize.OccurrenceOrderPlugin(),
+        new webpack.optimize.UglifyJsPlugin(),
+        new ExtractTextPlugin("style.css"),
+        new CleanWebpackPlugin('build/*.*', {
+            root: __dirname,
+            verbose: true,
+            dry: false
+        })
     ]
 }
