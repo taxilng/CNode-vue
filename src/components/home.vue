@@ -65,5 +65,5 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '../assets/css/home.scss'
+  @import '../assets/css/home.scss';
 </style>

@@ -1,0 +1,133 @@
+
+.secDiv {
+  border: 1px solid #ddd;
+  font-size: 20px;
+  .inner{
+    padding: 0 1rem;
+    background-color: #fff;
+  }
+  .put_top {
+    background: #80bd01;
+    padding: 2px 4px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 12px;
+  }
+  .topiclist-tab {
+    background-color: #e5e5e5;
+    color: #999;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-size: 12px;
+  }
+  .title {
+    margin-left: 10px;
+  }
+  h3 {
+    display: inline-block;
+  }
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  .changes {
+    font-size: 12px;
+    color: #838383;
+    > span::before {
+      content: '•'
+    }
+  }
+  #reply {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 2rem;
+      height: 2rem;
+      margin-right: 1rem;
+    }
+    .header {
+      padding: 10px;
+      background-color: #f6f6f6;
+      border-radius: 3px 3px 0 0;
+      color:#444;
+      font-size: 14px;
+    }
+  }
+}
+
+#content img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+.marginSpan {
+  margin: 0 0.5rem;
+}
+
+.secDiv span:first-child {
+  margin-left: 0;
+}
+
+
+#content {
+  //margin: 2rem auto 2rem auto;
+  //padding: 2rem 1rem 2rem 1rem;
+  //border: 1px solid #ddd;
+  line-height: 1.6;
+  padding-bottom: 1rem;
+  font-size: 15px;
+  //background: #EFF2F7;
+}
+
+
+.replySec {
+  background-color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  border-bottom: 2px solid #C0CCDA;
+  width: 100%;
+  //margin: 0.5rem auto;
+  padding: 1rem 0 1rem 1rem;
+}
+
+.replySec > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  //margin-left: 1rem;
+  justify-content: space-around;
+}
+
+
+
+.replySec p {
+  color: black;
+}
+
+.replyUp {
+  width: 100%;
+}
+
+.replySec .replyName {
+  color: #666;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.secDiv .thumbsClass {
+  float: right;
+  padding-right: 5px;
+}
+
+.markdown-text p, .preview p {
+  font-size: 15px;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  line-height: 2em;
+  margin: 0 0;
+}
