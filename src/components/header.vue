@@ -17,7 +17,7 @@
                 <span>
                     <strong>源代码: &nbsp;&nbsp;</strong>
                 </span>
-                <a href='https://github.com/taxilng/webpack/tree/element' target='_blank'>Github</a>
+                <a href='https://github.com/taxilng/CNode-vue' target='_blank'>Github</a>
                 <span class='star'>&nbsp;&nbsp;Star Star</span>
                 <br>
                 <br>
@@ -26,9 +26,8 @@
                 </span>
                 <ul>
                     <li>Vue.js</li>
-                    <li>Vue-router</li>
-                    <li>Axios</li>
-                    <li>Element</li>
+                    <li>ElementUI</li>
+                    <li>nodejs</li>
                     <li>CnodeJS API</li>
                 </ul>
             </div>
