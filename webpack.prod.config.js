@@ -89,7 +89,7 @@ module.exports = {
             }
         }),
         new ExtractTextPlugin("style.css"),
-        new CleanWebpackPlugin('build/*.*', {
+        new CleanWebpackPlugin('dist/*.*', {
             root: __dirname,
             verbose: true,
             dry: false
