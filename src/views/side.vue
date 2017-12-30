@@ -55,12 +55,12 @@
 <style scoped>
     .sideDiv {
         /*width: 20%;*/
-        height: 20rem;
+        height: 320px;
         background: #fff;
         border: 1px solid #ddd;
         word-break: break-all;
         font-size: 16px;
-        /*padding: 1rem;*/
+        /*padding: 16px;*/
     }
     .sideDiv .header{
         color: #51585c;
@@ -75,7 +75,7 @@
     .sideDiv .userInfo {
         display: flex;
         align-items: flex-end;
-        /*margin-bottom: 2rem;*/
+        /*margin-bottom: 32px;*/
     }
     a{
         color: #778087;
@@ -83,7 +83,7 @@
     }
     .sideDiv .userInfo span {
         font-size: 16px;
-        margin-left: 1rem;
+        margin-left: 16px;
         color: black;
         display: inline-block;
         height: 48px;
@@ -97,11 +97,11 @@
     }
 
     .sideDiv p svg {
-        margin-right: 1rem;
+        margin-right: 16px;
     }
 
     img {
-        width: 3rem;
-        height: 3rem;
+        width: 48px;
+        height: 48px;
     }
 </style>

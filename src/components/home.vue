@@ -5,26 +5,16 @@
                 <router-link to="/">
                     <img :src="item.author.avatar_url">
                 </router-link>
-                <span>{{item.reply_count}}/{{item.visit_count}}</span>
-                <div v-if="item.top">
-                    <span class="put_top">置顶</span>
-                </div>
-                <div v-else-if="item.good">
-                    <span class="put_top">精华</span>
-                </div>
-                <div v-else-if="item.tab === 'share'">
-                    <span class="topiclist-tab">分享</span>
-                </div>
-                <div v-else-if="item.tab === 'ask'">
-                    <span class="topiclist-tab">问答</span>
-                </div>
-                <div v-else>
-                    <span class="topiclist-tab">分享</span>
-                </div>
+                <span class="readCount">{{item.reply_count}}/{{item.visit_count}}</span>
+                    <span v-if="item.top" class="typeT put_top">置顶</span>
+                    <span v-else-if="item.good" class="typeT put_top">精华</span>
+                    <span v-else-if="item.tab === 'share'" class="typeT topiclist-tab">分享</span>
+                    <span  v-else-if="item.tab === 'ask'" class="typeT topiclist-tab">问答</span>
+                    <span  v-else class="typeT topiclist-tab">分享</span>
                 <router-link :to="{name:'content',params:{id:item.id}}" class="title">{{item.title}}</router-link>
             </li>
         </ul>
-        <el-pagination class="pagination" @size-change="handleSizeChange"  @current-change="handleCurrentChange" :current-page.sync="currentPage" :page-size="10" layout="sizes, prev, pager, next" :total="10000">
+        <el-pagination class="pagination"   @current-change="handleCurrentChange" :current-page.sync="currentPage" :page-size="10" layout="prev, pager, next" :total="1000">
         </el-pagination>
     </div>
 </template>

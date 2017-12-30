@@ -4,7 +4,7 @@
             <img src='../assets/cnodejs.svg' title='cnodejs.svg'>
         </router-link>
         <el-input type="text" placeholder="请输入内容" class="searchBox" prefix-icon="el-icon-search"></el-input>
-        <el-button type='text' @click='dialogVisible=true'>关于</el-button>
+        <el-button class="about" type='text' @click='dialogVisible=true'>关于</el-button>
         <el-dialog title='Vue.js重写CnodeJS社区' :visible.sync='dialogVisible' center width="500px">
             <div class='dialogDiv'>
                 <span>
@@ -55,36 +55,34 @@
     .searchBox {
         margin-left: 50px;
         width: 150px;
-        height: 3.6rem;
-        display: inline-block;
-        line-height: 3.6rem;
+        height: 57.6px;
+        /*display: inline-block;*/
+        line-height: 58px;
     }
     .head {
         background: #324057;
-        height: 3.6rem;
+        height: 58px;
         width: 100%;
-        /*position: absolute;*/
-        /*top: 0;*/
-        /*left: 0;*/
+
     }
 
     .head img {
         float: left;
-        width: 10rem;
-        height: 3.5rem;
-        margin-left: 10rem;
+        width: 160px;
+        height: 56px;
+        margin-left: 160px;
     }
 
     .head > button {
         display: inline-block;
         float: right;
-        line-height: 3.6rem;
-        margin-right: 10rem;
+        line-height: 48px;
+        margin-right: 160px;
         font-weight: bold;
         font-size: 20px;
         color: white;
         letter-spacing: 2px;
-        padding-top: 0.2rem;
+        padding-top:3.2px;
     }
 
     .head .dialogDiv {
@@ -92,7 +90,7 @@
     }
 
     .head ul {
-        margin-left: 1rem;
+        margin-left: 16px;
     }
 
     .head a {
@@ -104,5 +102,10 @@
         font-weight: bold;
         color: #1D8CE0;
         font-size: 20px;
+    }
+    @media screen and (max-width:600px){
+        .searchBox,.head > button.about {
+            display: none;
+        }
     }
 </style>
