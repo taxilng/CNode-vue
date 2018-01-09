@@ -33,7 +33,7 @@
     "vue-svg-icon": "^1.2.9",
     "vue-template-compiler": "^2.5.9",
     "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.8.2"
+    "webpack-dev-server": "2.8.2"
   },
   "dependencies": {
     "axios": "^0.17.1",
